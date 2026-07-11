@@ -1,4 +1,4 @@
-CREATE TABLE roles
+CREATE TABLE role
 (
     id UUID PRIMARY KEY,
 
@@ -6,7 +6,11 @@ CREATE TABLE roles
 
     description VARCHAR(255),
 
+    active BOOLEAN NOT NULL DEFAULT TRUE,
+
     created_at TIMESTAMP NOT NULL,
 
-    updated_at TIMESTAMP NOT NULL
+    updated_at TIMESTAMP NOT NULL,
+
+    version BIGINT NOT NULL DEFAULT 0
 );
